@@ -59,9 +59,9 @@
     <title>Welcome to Itgreenies</title>
   </head>
 
-  <body class="text-white font-poppins">
+  <body class="text-white font-poppins relative">
     <div class="container m-auto max-lg:w-11/12">
-      <header class="flex h-16 items-center mt-6 justify-between bg-background">
+      <header class="flex h-20 items-center  justify-between bg-background">
         <aside class="flex items-center">
           <img src="logo.png" alt="" class="block w-14 max-md:w-10" />
           <p class="uppercase font-semibold">
@@ -113,6 +113,29 @@
             backdrop-filter: blur(2px);
             -webkit-backdrop-filter: blur(25px);
           }
+          .about-contain, .kontak-contain{
+            padding: 12px;
+            background-color: white;
+          }
+          .about,.kontak{
+            background-image: url(about.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+           
+            
+         
+          }
+          .about:hover{
+            background-image: none;
+            background-color: white;
+            
+          }
+          .hidden-card{
+            backdrop-filter: blur(2px);
+            background-color: transparent;
+            -webkit-backdrop-filter: blur(25px);
+            
+          }
         </style>
         <section
           class="jumbotron text-center w-3/4 m-auto min-h-screen flex items-center justify-center"
@@ -132,23 +155,33 @@
               Hi.. I am Salman Asmandi, I am a web developer, web designer, and
               software developer.
             </p>
-            <a
+            <div class="more flex justify-center gap-2 bg-whi">
+              <a
               href="#about"
-              class="relative -top-4 text-gr font-bold text-xl hover:underline text-center max-sm:text-sm"
+              class="relative bg-white px-2 rounded-sm py-1 -top-4 text-gr font-bold text-lg hover:underline text-center max-sm:text-sm"
               >more</a
             >
+            <a
+            href="#about"
+            class="relative bg-white px-2 rounded-sm py-1 -top-4 text-gr font-bold text-lg hover:underline text-center max-sm:text-sm"
+            >download my cv</a
+          >
+            
+            </div>
           </div>
         </section>
-        <section
-          class="about group hover:bg-gr2 duration-300 bg-white w-4/5 max-lg:w-full m-auto rounded-sm text-gr2 p-8 mt-48 shadow-lg"
+        <!-- about -->
+        <div class="about-contain mt-48 rounded-sm w-4/5 m-auto box-border">
+          <section
+          class="about group duration-300 w-full max-lg:w-full  m-auto rounded-sm text-gr2 p-8  shadow-lg box-border"
           id="about"
         >
           <h3
-            class="font-semibold text-2xl max-lg:text-xl group-hover:text-white pb-2"
+            class="font-semibold text-white text-2xl max-lg:text-xl group-hover:text-gr2 pb-2 "
           >
             about me
           </h3>
-          <p class="max-sm:text-sm max-lg:text-lg group-hover:text-white">
+          <p class="max-sm:text-sm max-lg:text-lg group-hover:text-gr2 text-white">
             I am a fifth-semester student of Information Technology at Handayani
             University Makassar. I am very passionate about programming,
             especially in web development and databases. I have a strong
@@ -158,13 +191,13 @@
           <button
             class="cursor-pointer relative w-full group-hover:text-white text-left group"
           >
-            <p
-              class="group-focus:scale-0 max-lg:text-lg max-sm:text-sm underline"
-            >
-              more..
-            </p>
+          <p
+          class="group-focus:scale-0 max-lg:text-lg  max-sm:text-sm underline  text-white group-hover:text-gr2"
+        >
+          more..
+        </p>
             <div
-              class="text absolute top-16 w-full bg-white p-6 rounded-sm shadow-md scale-0 group-focus:scale-100 duration-300 text-gr2"
+              class="text absolute top-24 w-full bg-white p-6 rounded-sm shadow-md scale-0 group-focus:scale-100 duration-300 text-gr2 max-lg:w-full max-lg:m-auto"
             >
               <h4
                 class="font-semibold text-2xl max-lg:text-xl max-sm:text-sm pb-2 uppercase"
@@ -193,9 +226,10 @@
             </div>
           </button>
         </section>
+        </div>
         <!-- portofolio -->
         <section
-          class="portofolio group duration-300 bg-white w-4/5 m-auto max-lg:w-full rounded-sm text-gr2 p-6 mt-56 max-lg:mt-64"
+          class="portofolio group duration-300 bg-white w-4/5 m-auto max-lg:w-full rounded-sm text-gr2 p-6 mt-64 max-lg:mt-72"
           id="portofolio"
         >
           <div class="projek">
@@ -226,7 +260,7 @@
                   class="shadow-xl p-2"
                 />
                 <p
-                  class="text-center mt-4 max-lg:text-lg max-sm:text-sm w-3/4 m-auto p-4"
+                  class="text-center mt-4 max-lg:text-lg max-sm:text-sm w-3/4 m-auto p-4 text-gr2"
                 >
                   clone website Universitas Handayani Makassar
                 </p>
@@ -239,7 +273,7 @@
                   class="shadow-xl p-2"
                 />
                 <p
-                  class="text-center mt-4 max-lg:text-lg max-sm:text-sm w-3/4 m-auto p-4"
+                  class="text-center mt-4 max-lg:text-lg max-sm:text-sm w-3/4 m-auto p-4 text-gr2"
                 >
                   website projek kita
                 </p>
@@ -250,7 +284,8 @@
         <!-- portofolio -->
         <!-- skill -->
         <section
-          class="skills mt-96 max-lg:mt-bg w-4/5 m-auto max-lg:w-full p-6 rounded-sm text-white"
+          class="skills mt-96 max-lg:mt-bg w-4/5 m-auto max-lg:w-full p-6 rounded-sm text-white max-lg:relative 
+          max-lg:top-56"
           id="service"
         >
           <h3
@@ -260,95 +295,126 @@
           </h3>
           <!-- CARD -->
           <div class="contain-card flex justify-around gap-1 flex-wrap">
-            <div class="card">
+            <div class="card cursor-pointer relative group">
               <img
                 src="html.png"
                 alt=""
                 class="w-60 max-sm:w-40 p-4 bg-white rounded-sm box-border hover:bg-gr2 duration-300 hover:scale-105"
               />
+              <!-- hidden card -->
+              <div class="hidden-card z-10 absolute top-0 right-0 left-0 bottom-0 overflow-auto bg-white p-3 box-border text-gr2 max-lg:text-lg max-sm:text-sm rounded-sm scale-0 group-hover:scale-100 duration-300 shadow-md">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellendus quisquam molestiae!</p>
+              </div>
             </div>
-            <div class="card">
+            <div class="card cursor-pointer relative group">
               <img
                 src="css.png"
                 alt=""
                 class="w-60 p-4 bg-white rounded-sm box-border hover:bg-gr2 duration-300 hover:scale-105 max-sm:w-40"
               />
+               <!-- hidden card -->
+               <div class="hidden-card z-10 absolute top-0 right-0 left-0 bottom-0 overflow-auto bg-white p-3 box-border text-gr2 max-lg:text-lg max-sm:text-sm rounded-sm scale-0 group-hover:scale-100 duration-300 shadow-md">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellendus quisquam molestiae!</p>
+              </div>
             </div>
-            <div class="card">
+            <div class="card cursor-pointer relative group">
               <img
                 src="js.png"
                 alt=""
                 class="w-60 p-4 bg-white rounded-sm box-border hover:bg-gr2 duration-300 hover:scale-105 max-sm:w-40"
               />
+               <!-- hidden card -->
+               <div class="hidden-card z-10 absolute top-0 bottom-0 overflow-auto right-0 left-0 bg-white p-3 box-border text-gr2 max-lg:text-lg max-sm:text-sm rounded-sm scale-0 group-hover:scale-100 duration-300 shadow-md">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellendus quisquam molestiae!</p>
+              </div>
             </div>
-            <div class="card">
+            <div class="card cursor-pointer relative group">
               <img
                 src="java.png"
                 alt=""
                 class="w-60 p-4 bg-white rounded-sm box-border hover:bg-gr2 duration-300 hover:scale-105 max-sm:w-40"
               />
+               <!-- hidden card -->
+               <div class="hidden-card z-10 absolute top-0 right-0 left-0 bottom-0 overflow-auto bg-white p-3 box-border text-gr2 max-lg:text-lg max-sm:text-sm rounded-sm scale-0 group-hover:scale-100 duration-300 shadow-md">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellendus quisquam molestiae!</p>
+              </div>
             </div>
-            <div class="card">
+            <div class="card cursor-pointer relative group">
               <img
                 src="tailwind.png"
                 alt=""
                 class="w-60 p-4 bg-white rounded-sm box-border hover:bg-gr2 duration-300 hover:scale-105 max-sm:w-40"
               />
+               <!-- hidden card -->
+               <div class="hidden-card z-10 absolute top-0 right-0 left-0 bottom-0 overflow-auto bg-white p-3 box-border text-gr2 max-lg:text-lg max-sm:text-sm rounded-sm scale-0 group-hover:scale-100 duration-300 shadow-md">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellendus quisquam molestiae!</p>
+              </div>
             </div>
-            <div class="card">
+            <div class="card cursor-pointer relative group">
               <img
                 src="VB.NET.png"
                 alt=""
                 class="w-60 p-4 bg-white rounded-sm box-border hover:bg-gr2 duration-300 hover:scale-105 max-sm:w-40"
               />
+               <!-- hidden card -->
+               <div class="hidden-card z-10 absolute top-0 right-0 left-0 bottom-0 overflow-auto bg-white p-3 box-border text-gr2 max-lg:text-lg max-sm:text-sm rounded-sm scale-0 group-hover:scale-100 duration-300 shadow-md">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellendus quisquam molestiae!</p>
+              </div>
             </div>
-            <div class="card">
+            <div class="card cursor-pointer relative group">
               <img
                 src="mysql.png"
                 alt=""
                 class="w-60 p-4 bg-white rounded-sm box-border hover:bg-gr2 duration-300 hover:scale-105 max-sm:w-40"
               />
+               <!-- hidden card -->
+               <div class="hidden-card z-10 absolute top-0 right-0 left-0 bottom-0 overflow-auto bg-white p-3 box-border text-gr2 max-lg:text-lg max-sm:text-sm rounded-sm scale-0 group-hover:scale-100 duration-300 shadow-md">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellendus quisquam molestiae!</p>
+              </div>
             </div>
           </div>
         </section>
 
         <!-- skill -->
         <!-- contact -->
-        <section
-          class="kontak w-4/5 m-auto mt-52 text-gr2 p-6 max-lg:text-lg max-sm:text-sm bg-white group hover:bg-gr2 hover:text-white duration-300 rounded-sm"
-          id="contact"
-        >
-          <h3
-            class="font-semibold text-2xl max-lg:text-xl pb-2 uppercase max-lg:mb-4"
-          >
-             contact me
-          </h3>
-          <p>
-            lease contact me if you have anything to discuss. I have provided my contact information below
-          </p>
-          <div class="kontak mt-4 flex gap-1 items-center">
-            <i class="fa-solid fa-envelope text-3xl"></i>
-            <a href="itgreenies@gmail.com"> Itgreenies@gmail.com</a>
-          </div>
-          <div class="kontak mt-4 flex gap-1 items-center">
-            <i class="fa-brands fa-square-instagram block text-3xl"></i>
-            <a href="https://instagram.com/itgreenies?igshid=OGQ5ZDc2ODk2ZA==">Itgreenies</a>
-          </div>
+<div class="kontak-contain mt-52 max-lg:mt-96 max w-4/5 m-auto rounded-sm">
+  <section
+  class="kontak  m-auto w-full  text-white p-6 max-lg:text-lg max-sm:text-sm bg-white group hover:bg-gr2  duration-300 rounded-sm"
+  id="contact"
+>
+  <h3
+    class="font-semibold text-2xl max-lg:text-xl pb-2 uppercase max-lg:mb-4"
+  >
+     contact me
+  </h3>
+  <p>
+    please contact me if you have anything to discuss. I have provided my contact information below
+  </p>
+  <div class="kontak mt-4 flex gap-1 items-center hover:text-gr">
+    <i class="fa-solid fa-envelope text-3xl"></i>
+    <a href="mailto:itgreenies@gmail.com"> Itgreenies@gmail.com</a>
+  </div>
+  <div class="kontak mt-4 flex gap-1 items-center hover:text-gr">
+    <i class="fa-brands fa-square-instagram block text-3xl"></i>
+    <a href="https://instagram.com/itgreenies?igshid=OGQ5ZDc2ODk2ZA==">Itgreenies</a>
+  </div>
 
-          <div class="kontak mt-4 flex gap-1 items-center">
-            <i class="fa-brands fa-square-whatsapp text-3xl"></i>
-            <a href=" https://wa.me/message/ROM6WO7GT3IWH1 ">081230023345</a>
-          </div>
-          <div class="kontak mt-4 flex gap-1 items-center">
-            <i class="fa-brands fa-tiktok text-3xl"></i>
-            <a href="">Itgreenies</a>
-          </div>
-        </section>
+  <div class="kontak mt-4 flex gap-1 items-center hover:text-gr">
+    <i class="fa-brands fa-square-whatsapp text-3xl"></i>
+    <a href=" https://wa.me/message/ROM6WO7GT3IWH1 ">081230023345</a>
+  </div>
+  <div class="kontak mt-4 flex gap-1 items-center hover:text-gr">
+    <i class="fa-brands fa-tiktok text-3xl"></i>
+    <a href="">Itgreenies</a>
+  </div>
+</section>
+</div>
 
         <footer class="mt-56 text-center font-semibold max-sm:text-sm p-4">
           made by Salman Asmandi🔥 | Rumbai, pekanbaru, riau 2023
           <span class="text-red-700">❤</span>
         </footer>
+
       </main>
     </div>
   </body>
